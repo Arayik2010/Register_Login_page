@@ -1,0 +1,26 @@
+.loginPage {
+  width: 1500px;
+  height: 670px;
+  margin-left: 18px;
+  background-color: #3eaef8;
+  position: absolute;
+}
+.login {
+  width: 200px;
+  height: 300px;
+  margin: 30px auto;
+  border: 2px solid silver;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  position: relative;
+  text-align: center;
+}
+.inputLogin {
+  border-radius: 8px;
+  margin: 10px 10px;
+}
+.radio {
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
