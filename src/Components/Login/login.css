@@ -1,7 +1,7 @@
 .loginPage {
   width: 1500px;
-  height: 670px;
-  margin-left: 18px;
+  height: 93vh;
+  margin: 28px 18px;
   background-color: #3eaef8;
   position: absolute;
 }
@@ -20,7 +20,7 @@
   border-radius: 8px;
   margin: 10px 10px;
 }
-.radio {
+.checkbox {
   margin-right: 50px;
   margin-bottom: 10px;
 }

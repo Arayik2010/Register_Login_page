@@ -1,0 +1,43 @@
+:root {
+  --primary: #4628ff;
+  --warning: #ffd028;
+  --danger: #ed3f27;
+  --success: #75fa83;
+  --white: #fdfdfd;
+  --dark: #181717;
+}
+
+.input {
+  border-radius: 8px;
+  margin: 10px 10px;
+}
+
+.input--primary--solid {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.input--warning--solid {
+  background-color: var(--warning);
+  color: var(--dark);
+}
+.input--danger--solid {
+  background-color: var(--danger);
+  color: var(--white);
+}
+
+.input_success_solid {
+  background-color: var(--success);
+  color: var(--dark);
+}
+
+.input--medium {
+    width: 180px;
+    height: 20px;
+  font-size: 15px;
+}
+.input--large {
+  width: 180px;
+  height: 30px;
+  font-size: 15px;
+}

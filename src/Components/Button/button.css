@@ -3,6 +3,7 @@
   --warning: #ffd028;
   --danger: #ed3f27;
   --success: #75fa83;
+  --log: #fdfdfd;
   --white: #fdfdfd;
   --dark: #181717;
 }
@@ -41,6 +42,11 @@
   background-color: var(--success);
   color: var(--white);
   border: none;
+}
+.btn_log_solid {
+   background-color: var(--log);
+  color: var(--dark);
+  border: 2px solid var(--dark);
 }
 
 .btn--primary--outline {

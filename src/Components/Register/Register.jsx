@@ -1,5 +1,7 @@
 import React from "react";
+import { checkLogin, validationEmail, validationPass } from "../../utils/Validation";
 import Button from "../Button/Button";
+import Input from "../Input/Input";
 import "./register.css";
 
 const Register = () => {
@@ -7,15 +9,32 @@ const Register = () => {
     <div className="registerPage">
       <div className="register">
         <div>
-          <p>
-            <h3>Register your account</h3>
-          </p>
+          <h3>Register your account</h3>
         </div>
-        <input className="input" type="text" placeholder="email" />
-        <input className="input" type="text" placeholder="password" />
-        <input className="input" type="text" placeholder="repeat password" />
-        <input className="input" type="text" placeholder="phone number" />
-        <Button children="Register" type="button" buttonStyle="btn--primary--solid" buttonSize="btn--large" />
+        <Input
+          inputStyle="input--primary--solid"
+          inputSize="input--medium"
+          type="text"
+          placeholder="email"
+          onChange={validationEmail}
+        />
+
+        <Input
+          inputStyle="input--warning--solid"
+          inputSize="input--medium"
+          type="text"
+          placeholder="password"
+          onChange={validationPass}
+        />
+        <Input inputStyle="input--danger--solid" inputSize="input--medium" type="text" placeholder="repeat password" />
+        <Input inputStyle="input_success_solid" inputSize="input--medium" type="number" placeholder="phone number" />
+        <Button
+          children="Register"
+          type="button"
+          buttonStyle="btn--primary--solid"
+          buttonSize="btn--large"
+          checkLogin={checkLogin}
+        />
       </div>
     </div>
   );

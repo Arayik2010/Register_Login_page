@@ -1,14 +1,14 @@
 .registerPage {
   width: 1500px;
-  height: 670px;
-  margin-left: 18px;
+  height: 93vh;
+  margin: 28px 18px;
   background-color: #3eaef8;
   position: absolute;
 }
 .register {
   width: 200px;
   height: 300px;
-  margin: 30px auto;
+  margin: 28px auto;
   border: 2px solid silver;
   border-radius: 10px;
   padding: 20px;
@@ -16,7 +16,4 @@
   position: relative;
   text-align: center;
 }
-.input {
-  border-radius: 8px;
-  margin: 10px 10px;
-}
+
