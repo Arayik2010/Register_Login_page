@@ -1,42 +1,70 @@
-import React from "react";
+import React, { useRef } from "react";
 import { checkLogin, validationEmail, validationPass } from "../../utils/Validation";
 import Button from "../Button/Button";
 import Input from "../Input/Input";
+import Login from "../Login/Login";
 import "./register.css";
 
 const Register = () => {
-  return (
-    <div className="registerPage">
-      <div className="register">
-        <div>
-          <h3>Register your account</h3>
-        </div>
-        <Input
-          inputStyle="input--primary--solid"
-          inputSize="input--medium"
-          type="text"
-          placeholder="email"
-          onChange={validationEmail}
-        />
+  const email = useRef();
+  const password = useRef();
 
-        <Input
-          inputStyle="input--warning--solid"
-          inputSize="input--medium"
-          type="text"
-          placeholder="password"
-          onChange={validationPass}
-        />
-        <Input inputStyle="input--danger--solid" inputSize="input--medium" type="text" placeholder="repeat password" />
-        <Input inputStyle="input_success_solid" inputSize="input--medium" type="number" placeholder="phone number" />
-        <Button
-          children="Register"
-          type="button"
-          buttonStyle="btn--primary--solid"
-          buttonSize="btn--large"
-          checkLogin={checkLogin}
-        />
+  const handleSubmit = () => {
+    if (email.current.value && password.current.value) {
+      localStorage.setItem("emaildata", email.current.value);
+      localStorage.setItem("passwordData", password.current.value);
+
+
+    }
+    return true
+    // window.location.reload();
+
+  };
+  return (
+    <>
+
+      <div className="registerPage">
+        <div className="register">
+          <div>
+            <h3>Register your account</h3>
+          </div>
+          <label htmlFor="email_name">Email
+            <Input
+              id="emiai_name"
+              inputStyle="input--primary--solid"
+              inputSize="input--medium"
+              type="text"
+              placeholder="email"
+              onChange={validationEmail}
+              ref={email}
+            />
+          </label>
+          <label htmlFor="pass_name">Password
+            <Input
+              id="pass_name"
+              inputStyle="input--warning--solid"
+              inputSize="input--medium"
+              type="text"
+              placeholder="password"
+              onChange={validationPass}
+              ref={password}
+            />
+          </label>
+
+          <Button
+            children="Register"
+            type="button"
+            buttonStyle="btn--primary--solid"
+            buttonSize="btn--large"
+            onClick={handleSubmit}
+          />
+        </div>
       </div>
-    </div>
+
+
+    </>
+
+
   );
 };
 export default Register;
