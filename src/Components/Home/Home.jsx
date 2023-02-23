@@ -14,6 +14,9 @@ const Home = () => {
         buttonSize="btn--large"
        
       />
+      <h1>hello</h1>
+      <p>hello world</p>
+      <div>my first chenge</div>
     </div>
   );
 };
