@@ -17,6 +17,7 @@ const Home = () => {
       <h1>hello</h1>
       <p>hello world</p>
       <div>my first chenge</div>
+      <button>add</button>
     </div>
   );
 };
